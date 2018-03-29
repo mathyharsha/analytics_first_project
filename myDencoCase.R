@@ -12,12 +12,11 @@ str(denco2)
 #head(sales1,n=7)
 #names(sales1)
 
-sales = sales1  # keeping a backup
+sales = denco2  # keeping a backup
 ?summary
 summary(sales)
 
 str(sales)
-sales$revenue= as.numeric(sales$revenue)
 dim(sales)
 unique(sales$custname)
 length(unique(sales$custname))
