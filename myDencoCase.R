@@ -48,7 +48,8 @@ names(sales)
 
 library(dplyr)
 
-sales %>% dplyr::filter(margin > 1000000)
+sales %>% filter(margin > 1000000) %>% arrange(region, desc(revenue))
+sales %>% filter(region=='01-East' & revenue > 400000) %>% select(partnum, region) %>%  head
 
 names(sales)
 sales %>% group_by(custname) %>% 
@@ -71,6 +72,10 @@ head(df5)
 # Freqency --------
 names(sales)
 head(sort(table(sales$custname), decreasing=T))
+
+head(sort(table(sales$custname), decreasing=T), n=10)
+tail(sort(table(sales$custname), decreasing=T), n=10)
+
 
 #xtab
 #
