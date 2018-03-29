@@ -1,6 +1,6 @@
 # Case Study - Denco  
 
-sales1 = read.csv("./data/denco.csv")
+#sales1 = read.csv("./data/denco.csv")
 #sales1 = read.csv(file.choose())
 
 #using gsheet
@@ -9,8 +9,8 @@ url = 'https://docs.google.com/spreadsheets/d/1PWWoMqE5o3ChwJbpexeeYkW6p4BHL9hub
 denco2 = as.data.frame(gsheet2tbl(url))
 str(denco2)
 
-head(sales1,n=7)
-names(sales1)
+#head(sales1,n=7)
+#names(sales1)
 
 sales = sales1  # keeping a backup
 ?summary
